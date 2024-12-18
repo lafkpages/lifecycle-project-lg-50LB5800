@@ -1,0 +1,18 @@
+{
+  "editor.wordWrap": "bounded",
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "cSpell.words": [
+    "'z",
+    "Cura",
+    "Gumi",
+    "Kaplan",
+    "KGHM",
+    "McCallister",
+    "Mied",
+    "Mława",
+    "Polska",
+    "UltiMaker",
+    "Wrocław"
+  ],
+  "cSpell.language": "en,en-GB"
+}

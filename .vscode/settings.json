@@ -1,5 +1,4 @@
 {
-  "editor.wordWrap": "bounded",
   "latex-workshop.formatting.latex": "tex-fmt",
   "cSpell.words": [
     "'z",

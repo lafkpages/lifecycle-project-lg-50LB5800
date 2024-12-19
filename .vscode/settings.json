@@ -14,5 +14,11 @@
     "UltiMaker",
     "Wrocław"
   ],
-  "cSpell.language": "en,en-GB"
+  "cSpell.language": "en,en-GB",
+  "grammarly.selectors": [
+    {
+      "language": "latex",
+      "scheme": "file"
+    }
+  ]
 }

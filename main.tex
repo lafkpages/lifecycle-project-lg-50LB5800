@@ -37,7 +37,8 @@ LG 50LB5800}}
 \urlstyle{same}
 
 % Custom commands
-\newcommand\todo[1]{{\color{red}{\footnotesize[TODO: #1]}}} % show todo's in red
+\newcommand\todo[1]{{\color{red}{\footnotesize[TODO:\@ #1]}}}
+% show TODO's in red
 %\newcommand\todo[1]{} % to remove all todo's
 
 \begin{document}
@@ -52,13 +53,14 @@ Project: LG 50LB5800}}}} % the mbox and hspace help to fit in one line
 \maketitle
 
 % Nicer formatting of the abstract enclosed in lines
-\renewenvironment{abstract}
-{
-  \begin{quote}
-  \noindent \rule{\linewidth}{.5pt}\par{\bfseries \abstractname.}}
-  {\\ \noindent \rule{\linewidth}{.5pt}\medskip
-  \end{quote}
-}
+% \renewenvironment{abstract}
+% {
+%   \begin{quote}
+%   \noindent \rule{\linewidth}{.5pt}\par{\bfseries \abstractname. }
+% }{
+%   \\ \noindent \rule{\linewidth}{.5pt}\medskip
+%   \end{quote}
+% }
 
 \vspace{-2em}
 % \begin{abstract}\small\itshape
@@ -71,7 +73,7 @@ Project: LG 50LB5800}}}} % the mbox and hspace help to fit in one line
 \section{Criterion A: 3D Model}
 
 For my Digital Societies Lifecycle Project, I decided to research the
-lifecycle of an LG 50LB5800 TV. I have one of these at home, so it is
+lifecycle of an LG 50LB5800 TV.\@ I have one of these at home, so it is
 convenient to measure and model. Since I found it being thrown away,
 and it currently doesn't work, I'm free to open it up and see inside
 if I want to.
@@ -81,8 +83,7 @@ if I want to.
   \centering
   \includegraphics[width=1\linewidth]{lg-50LB5800}
   \caption{50LB5800 LG Smart TV~\autocite{unknown-author-no-dateB}.}
-  \medskip
-  \label{fig:lg-50LB5800}
+  \medskip\label{fig:lg-50LB5800}
 \end{figure}
 
 I decided to model the TV using CAD software, as I had previous
@@ -90,7 +91,7 @@ experience using
 \href{https://www.autodesk.com/products/fusion-360/overview}{Fusion
 360} and thought it was the most appropriate choice for this project.
 However, I had issues with licensing and downloading Fusion 360, so I
-decided to try out FreeCAD. \href{https://www.freecad.org}{FreeCAD}
+decided to try out FreeCAD.\@ \href{https://www.freecad.org}{FreeCAD}
 is an open-source parametric 3D modeling
 software~\autocite{jolahde-2018}. It has a variety of online
 resources, like tutorials and documentation, so I was able to learn
@@ -109,8 +110,7 @@ inches, however I was able to make an accurate sketch using constraints.
   \centering
   \includegraphics[width=1\linewidth]{a1}
   \caption{Sketching the TV screen in FreeCAD.}
-  \medskip
-  \label{fig:a1}
+  \medskip\label{fig:a1}
 \end{figure}
 
 Then I extruded, or in FreeCAD terms ``padded'', the frame. I had to
@@ -121,8 +121,7 @@ measure the thickness of the TV to make it to scale.
   \centering
   \includegraphics[width=1\linewidth]{a2}
   \caption{Modeling the base of the TV in FreeCAD.}
-  \medskip
-  \label{fig:a2}
+  \medskip\label{fig:a2}
 \end{figure}
 
 By taking more measurements and using these basic operations
@@ -134,8 +133,7 @@ arrive at my final 3D model.
   \centering
   \includegraphics[width=1\linewidth]{a3}
   \caption{My final 3D model of a 50LB5800 LG Smart TV.}
-  \medskip
-  \label{fig:a3}
+  \medskip\label{fig:a3}
 \end{figure}
 
 I decided to add the LG logo to the back of my model, just like the
@@ -147,17 +145,16 @@ logo using regular sketch tools and B-splines for the curves of the G.
   \centering
   \includegraphics[width=1\linewidth]{a4}
   \caption{Sketching the LG logo on the back of the 3D model.}
-  \medskip
-  \label{fig:a4}
+  \medskip\label{fig:a4}
 \end{figure}
 
 Once I was done modelling, I exported my 3D model as an
 \href{https://drive.google.com/file/d/1JmbW4QBFge6CosMKm4P-QzFGuzJ4o9Oy/view?usp=sharing}{STL
 file} that slicing software can understand. I used
 \href{https://ultimaker.com/software/ultimaker-cura}{UltiMaker Cura}
-for slicing my model, as it is what Mr. McCallister recommended in
+for slicing my model, as it is what Mr.\ McCallister recommended in
 class and is what he showed us the settings for. The settings used
-are shown in table \ref{tab:cura-settings}. The model had to be
+are shown in table~\ref{tab:cura-settings}. The model had to be
 scaled down for printing, as the 3D printer is small and this print
 was only a prototype anyway. The model was scaled in Cura to 15\% of
 its original size.
@@ -167,8 +164,7 @@ its original size.
   \centering
   \includegraphics[width=1\linewidth]{a5-cura}
   \caption{Scaling and slicing the 3D model in UltiMaker Cura.}
-  \medskip
-  \label{fig:a5-cura}
+  \medskip\label{fig:a5-cura}
 \end{figure}
 
 \begin{table}[H]
@@ -181,8 +177,8 @@ its original size.
     Support Structure & Normal & Tree \\
     Printing Temperature & 200.0 \textdegree C & 215.0 \textdegree C \\
   \end{tabular}
-  \caption{Settings used for slicing the model in UltiMaker Cura.}
-  \label{tab:cura-settings}
+  \caption{Settings used for slicing the model in UltiMaker
+  Cura.}\label{tab:cura-settings}
 \end{table}
 
 Once the model was sliced into G-code, I saved the G-code onto an SD
@@ -212,6 +208,10 @@ it to print well enough.
     \end{itemize}
 
   \item What are the ethical concerns with LG's TV production?
+    \begin{itemize}
+      \item Research LG's conflict mineral policy and the ethical
+        concerns with TV production.
+    \end{itemize}
 
   \item Where are the raw materials for LG's TVs sourced from?
     \begin{itemize}
@@ -224,8 +224,8 @@ it to print well enough.
 
 This specific model of the 50LB5800 LG Smart TV that I have at home
 was assembled in Poland, July 2014, as can be seen on the
-informational sticker on the back of the TV in figure
-\ref{fig:lg-back-label}. The TV was likely produced in the LG
+informational sticker on the back of the TV in
+figure~\ref{fig:lg-back-label}. The TV was likely produced in the LG
 production plant in Mława, Poland~\autocite{lg-2020}. The LG Display
 plant in Mława, however, was relocated to Wrocław in 2016 and is no
 longer operated by LG
@@ -237,20 +237,18 @@ also now discontinued and no longer produced~\autocite{unknown-author-no-dateB}.
 \begin{figure}[H]
   \medskip
   \centering
-  \includegraphics[width=1\linewidth]{lg-back-label}
+  \includegraphics[width=.75\linewidth]{lg-back-label}
   \caption{The informational sticker on the back of my LG 50LB5800 Smart TV.}
-  \medskip
-  \label{fig:lg-back-label}
+  \medskip\label{fig:lg-back-label}
 \end{figure}
 
 \begin{figure}[H]
   \medskip
   \centering
-  \includegraphics[width=1\linewidth]{lgensol-wroclaw-google-maps}
+  \includegraphics[width=.75\linewidth]{lgensol-wroclaw-google-maps}
   \caption{The LG plant in Wrocław, Poland. Image from
   \href{https://maps.app.goo.gl/vMukYzKtPBX12RGo9}{Google Maps}.}
-  \medskip
-  \label{fig:lgensol-wroclaw-google-maps}
+  \medskip\label{fig:lgensol-wroclaw-google-maps}
 \end{figure}
 
 The production process of the LG 50LB5800 Smart TV is not
@@ -259,7 +257,32 @@ production process of LG TVs. Jeremy Kaplan, a former editor-in-chief of
 Digital Trends, visited the LG Display facility in Gumi, South Korea,
 and described the manufacturing process of LG's TVs.
 
-\todo{Explain the general production process of LG TVs.}
+\begin{quote}
+  Because technology changes so rapidly, assembly lines are designed
+  to be modular. They look impermanent, almost transient, the sort of
+  thing you would put together yourself if someone told you to make one.
+
+  Conveyor belts rolled along as straight as an arrow the entire
+  length of the room, perhaps a quarter mile. Screens came down from
+  the ceiling to workstations where arms, either robotic or human,
+  attached the few circuit boards required to transmit and process the picture.
+\end{quote}
+
+\begin{figure}[H]
+  \medskip
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gumi-facility-1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gumi-facility-2}
+  \end{subfigure}
+  \caption{The LG Display facility in Gumi, South Korea~\autocite{kaplan-2016}.}
+  \medskip\label{fig:gumi-facility}
+\end{figure}
+
+\todo{Is this enough for criterion B?}
 
 \subsection{Ethical Concerns}
 
@@ -301,7 +324,7 @@ gold~\autocite{lg-electronics-2023}. Tin is used for soldering
 electronic and metallic components, and gold is used for circuit
 board connectors~\autocite{brigham-2023}. An example of where these
 minerals are used in the LG 50LB5800 Smart TV is in its mainboard, as
-seen in figure \ref{fig:EBT62999602}, which contains gold connectors
+seen in figure~\ref{fig:EBT62999602}, which contains gold connectors
 and tin soldering.
 
 \begin{figure}[H]
@@ -309,8 +332,7 @@ and tin soldering.
 \centering
 \includegraphics[width=1\linewidth]{EBT62999602}
 \caption{The LG 50LB5800 Smart TV mainboard~\autocite{tv-parts-canada-2024}.}
-\medskip
-\label{fig:EBT62999602}
+\medskip\label{fig:EBT62999602}
 \end{figure}
 
 The mainboard goes through a surface treatment process called
@@ -330,8 +352,8 @@ conductivity~\autocite{elmore-2024}.
 
 The LG 50LB5800 Smart TV goes through several stages in its lifecycle,
 from raw material extraction, to production, to distribution, to
-consumption, to disposal. The map in figure \ref{fig:lg-map} shows the
-relevant locations in the lifecycle of the LG 50LB5800 Smart TV.
+consumption, to disposal. The map in figure~\ref{fig:lg-map} shows the
+relevant locations in the lifecycle of the LG 50LB5800 Smart TV.\@
 
 The map was created using Google My Maps, a web mapping service that
 allows users to create custom maps with markers, lines, and shapes.
@@ -347,9 +369,10 @@ Earth}.
 \includegraphics[width=1\linewidth]{lg-map}
 \caption{Map of relevant locations in the lifecycle of the LG
 50LB5800 Smart TV.}
-\medskip
-\label{fig:lg-map}
+\medskip\label{fig:lg-map}
 \end{figure}
+
+\section{Criterion D: Product Lifespan, Disposal, and Impact}
 
 \printbibliography[heading=bibintoc,title=References]
 

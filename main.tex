@@ -12,6 +12,32 @@
 \usepackage{subcaption}
 \captionsetup{labelfont=bf, textfont=it, font=footnotesize}
 
+% Image shortcuts
+\newcommand{\img}[2]{
+  \begin{figure}[H]
+    \medskip
+    \centering
+    \includegraphics[width=1\linewidth]{#1}
+    \caption{#2}
+    \medskip\label{fig:#1}
+  \end{figure}
+}
+\newcommand{\imgs}[2]{
+  \begin{figure}[H]
+    \medskip
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{#1-1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{#1-2}
+    \end{subfigure}
+    \caption{#2}
+    \medskip\label{fig:#1}
+  \end{figure}
+}
+
 % For styling headers/sections
 \usepackage{titlesec}
 \titlelabel{\thetitle.\quad}
@@ -78,13 +104,7 @@ convenient to measure and model. Since I found it being thrown away,
 and it currently doesn't work, I'm free to open it up and see inside
 if I want to.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=1\linewidth]{lg-50LB5800}
-  \caption{50LB5800 LG Smart TV~\autocite{unknown-author-no-dateB}.}
-  \medskip\label{fig:lg-50LB5800}
-\end{figure}
+\img{lg-50LB5800}{50LB5800 LG Smart TV~\autocite{unknown-author-no-dateB}.}
 
 I decided to model the TV using CAD software, as I had previous
 experience using
@@ -105,48 +125,24 @@ sketched the TV screen. This was more challenging as the only
 measurement I had was the diagonal length of the screen being 50
 inches, however I was able to make an accurate sketch using constraints.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=1\linewidth]{a1}
-  \caption{Sketching the TV screen in FreeCAD.}
-  \medskip\label{fig:a1}
-\end{figure}
+\img{a1}{Sketching the TV screen in FreeCAD.}
 
 Then I extruded, or in FreeCAD terms ``padded'', the frame. I had to
 measure the thickness of the TV to make it to scale.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=1\linewidth]{a2}
-  \caption{Modeling the base of the TV in FreeCAD.}
-  \medskip\label{fig:a2}
-\end{figure}
+\img{a2}{Modeling the base of the TV in FreeCAD.}
 
 By taking more measurements and using these basic operations
 (sketching and padding, and also a bit of filleting), I was able to
 arrive at my final 3D model.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=1\linewidth]{a3}
-  \caption{My final 3D model of a 50LB5800 LG Smart TV.}
-  \medskip\label{fig:a3}
-\end{figure}
+\img{a3}{My final 3D model of a 50LB5800 LG Smart TV.}
 
 I decided to add the LG logo to the back of my model, just like the
 real one has. I sketched the logo on top of a reference image of the
 logo using regular sketch tools and B-splines for the curves of the G.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=1\linewidth]{a4}
-  \caption{Sketching the LG logo on the back of the 3D model.}
-  \medskip\label{fig:a4}
-\end{figure}
+\img{a4}{Sketching the LG logo on the back of the 3D model.}
 
 Once I was done modelling, I exported my 3D model as an
 \href{https://drive.google.com/file/d/1JmbW4QBFge6CosMKm4P-QzFGuzJ4o9Oy/view?usp=sharing}{STL
@@ -159,13 +155,7 @@ scaled down for printing, as the 3D printer is small and this print
 was only a prototype anyway. The model was scaled in Cura to 15\% of
 its original size.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=1\linewidth]{a5-cura}
-  \caption{Scaling and slicing the 3D model in UltiMaker Cura.}
-  \medskip\label{fig:a5-cura}
-\end{figure}
+\img{a5-cura}{Scaling and slicing the 3D model in UltiMaker Cura.}
 
 \begin{table}[H]
   \centering
@@ -234,22 +224,11 @@ to LG Chem instead~\autocite{shah-2024}. The TV was likely produced
 in the Mława plant before it was relocated. This model of the TV is
 also now discontinued and no longer produced~\autocite{unknown-author-no-dateB}.
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=.75\linewidth]{lg-back-label}
-  \caption{The informational sticker on the back of my LG 50LB5800 Smart TV.}
-  \medskip\label{fig:lg-back-label}
-\end{figure}
+\img{lg-back-label}{The informational sticker on the back of my LG
+50LB5800 Smart TV.}
 
-\begin{figure}[H]
-  \medskip
-  \centering
-  \includegraphics[width=.75\linewidth]{lgensol-wroclaw-google-maps}
-  \caption{The LG plant in Wrocław, Poland. Image from
-  \href{https://maps.app.goo.gl/vMukYzKtPBX12RGo9}{Google Maps}.}
-  \medskip\label{fig:lgensol-wroclaw-google-maps}
-\end{figure}
+\img{lgensol-wroclaw-google-maps}{The LG plant in Wrocław, Poland.
+Image from \href{https://maps.app.goo.gl/vMukYzKtPBX12RGo9}{Google Maps}.}
 
 The production process of the LG 50LB5800 Smart TV is not
 specifically documented, but it can be inferred from the general
@@ -268,19 +247,8 @@ and described the manufacturing process of LG's TVs.
   attached the few circuit boards required to transmit and process the picture.
 \end{quote}
 
-\begin{figure}[H]
-  \medskip
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.9\linewidth]{gumi-facility-1}
-  \end{subfigure}%
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.9\linewidth]{gumi-facility-2}
-  \end{subfigure}
-  \caption{The LG Display facility in Gumi, South Korea~\autocite{kaplan-2016}.}
-  \medskip\label{fig:gumi-facility}
-\end{figure}
+\imgs{gumi-facility}{The LG Display facility in Gumi, South
+Korea~\autocite{kaplan-2016}.}
 
 \todo{Is this enough for criterion B?}
 
@@ -367,19 +335,18 @@ advantages include increased solderability, versatility, and
 environmental friendliness, while some disadvantages include quicker
 oxidation and soldering reliability issues~\autocite{jenell-2023}.
 
-\begin{figure}[H]
-\medskip
-\centering
-\includegraphics[width=1\linewidth]{EBT62999602}
-\caption{The LG 50LB5800 Smart TV mainboard~\autocite{tv-parts-canada-2024}.}
-\medskip\label{fig:EBT62999602}
-\end{figure}
+\img{EBT62999602}{The LG 50LB5800 Smart TV
+mainboard~\autocite{tv-parts-canada-2024}.}
+
+\subsubsection{KGHM Polska Mied\'z: Gold Supplier}
 
 Gold is used in several parts of the TV, such as the PCB, connectors
 and microchips. Gold is used in gold plating for the PCB for
 efficient and reliable electrical connections, in connectors for its
 low resistance and good durability, and in microchips for its high
 conductivity~\autocite{elmore-2024}.
+
+\imgs{kghm-gold}{KGHM Polska Mied\'z's gold bars~\autocite{kghm-polska-miedz-no-dateB}.}
 
 \section{Criterion C: Product Map}
 
@@ -396,14 +363,8 @@ Maps} and on
 \href{https://www.google.com/maps/d/earth?mid=1_aeai9S8RSvkTi9m7rJfM217r6kOGgc}{Google
 Earth}.
 
-\begin{figure}[H]
-\medskip
-\centering
-\includegraphics[width=1\linewidth]{lg-map}
-\caption{Map of relevant locations in the lifecycle of the LG
+\img{lg-map}{Map of relevant locations in the lifecycle of the LG
 50LB5800 Smart TV.}
-\medskip\label{fig:lg-map}
-\end{figure}
 
 \section{Criterion D: Product Lifespan, Disposal, and Impact}
 

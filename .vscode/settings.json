@@ -4,7 +4,7 @@
   "latex-workshop.latex.autoClean.run": "onSucceeded",
   "latex-workshop.linting.chktex.enabled": true,
   "latex-workshop.linting.lacheck.enabled": true,
-  "cSpell.language": "en,en-GB",
+  "cSpell.language": "en-GB",
   "cSpell.words": [
     "'z",
     "Cura",

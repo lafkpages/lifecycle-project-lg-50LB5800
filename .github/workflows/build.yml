@@ -1,0 +1,19 @@
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+      - run: |
+          git checkout --orphan build
+          git rm -rf .
+          git add -f main.pdf
+          git commit -m "Latest build"
+          git push origin HEAD:build --force
+          git checkout -f main
+          git branch -D build
